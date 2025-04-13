@@ -16,7 +16,7 @@ In your mcp.json file in vscode, under `.vscode/mcp.json`, add the following con
             "password": true
         }
     ],
-    "mcpServers": {
+    "servers": {
         "example-mcp-server": {
             "type": "stdio",
             "command": "npx",
@@ -33,7 +33,7 @@ In your mcp.json file in vscode, under `.vscode/mcp.json`, add the following con
 
 ```json
 {
-    "mcpServers": {
+    "servers": {
         "example-mcp-server": {
             "command": "cmd",
             "args": ["/c", "npx", "-y", "github:Username/example-mcp-server"],
