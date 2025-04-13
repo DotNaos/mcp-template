@@ -2,45 +2,17 @@
 
 ## Usage
 
-In your mcp.json file in vscode, under `.vscode/mcp.json`, add the following configuration:
+In your mcp.json file in vscode, under `.vscode/mcp.json`, you need the following configuration:
 
 ### MacOS / Linux
 
-```json
-{
-    "inputs": [
-        {
-            "type": "promptString",
-            "id": "example-token",
-            "description": "The token for the MCP server",
-            "password": true
-        }
-    ],
-    "servers": {
-        "example-mcp-server": {
-            "type": "stdio",
-            "command": "npx",
-            "args": ["-y", "github:Username/example-mcp-server"],
-            "env": {
-                "EXAMPLE_TOKEN": "${input:example-token}"
-            }
-        }
-    }
-}
-```
+**[View mcp.json Configuration](.vscode/mcp.json)**
 
 ### Windows
 
-```json
-{
-    "servers": {
-        "example-mcp-server": {
-            "command": "cmd",
-            "args": ["/c", "npx", "-y", "github:Username/example-mcp-server"],
-            "env": {
-                "EXAMPLE_TOKEN": "${input:example-token}"
-            }
-        }
-    }
-}
-```
+Same as Macos / Linux but change the following lines:
+
+| Unix | Windows |
+|------|---------|
+| `"command": "npx"` | `"command": "cmd"` |
+| `"args": ["-y", "..." ]` | `"args" : ["/c", "npx", "-y", "..." ]` |
